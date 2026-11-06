@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main, develop]
   push:
-    branches: [main, develop, "feature/**"]
+    branches: [main, develop, "feat/**"]
   workflow_dispatch:
 
 permissions:
@@ -29,4 +29,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITLEAKS_ENABLE_COMMENTS: "true"
           GITLEAKS_ENABLE_UPLOAD_ARTIFACT: "true"
-
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
